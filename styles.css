@@ -1,0 +1,261 @@
+/* General reset and setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+	position: sticky;
+    top: 0;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text color */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Align items with space between */
+    align-items: center; /* Center items vertically */
+	z-index: 1000;
+}
+main {
+    padding-top: 60px; /* Adjust based on your header height */
+}
+/* Logo styles */
+.logo img {
+    height: 8vw; /* Responsive logo height */
+    max-height: 60px; /* Maximum height for smaller screens */
+}
+
+section {
+    scroll-margin-top: 80px; /* Adjust based on your sticky header height */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #000; /* Black text color */
+    text-decoration: none;
+    transition: color 0.3s;
+	padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Hover color */
+}
+
+/*.logos {
+/*    margin-top: 2vh; /* Adjust spacing between subtitle and logos relative to viewport height */
+/*   display: flex; /* Use flexbox to align items */
+/*    justify-content: center; /* Center align items horizontally */
+/*    align-items: center; /* Center align items vertically */
+/*}
+
+.logos img {
+    height: 8vw; /* Set a responsive height for logos relative to viewport width */
+/*    max-height: 80px; /* Set a maximum height for smaller screens */
+/*    margin: 0 2vw; /* Adjust spacing between logos relative to viewport width */
+/*}
+
+
+@media (max-width: 600px) {
+    .logos {
+        flex-direction: column; /* Stack logos vertically on mobile screens */
+        margin-top: 5vh; /* Adjust margin for stacked logos relative to viewport height */
+    }
+
+    .logos img {
+        height: 15vw; /* Further increase logo size for smaller mobile screens */
+        margin: 5px 0; /* Adjust margin for stacked logos */
+    }
+}
+
+#home {
+    text-align: center; /* Center-align all text content */
+    padding: 0px 20px; /* Adjust padding as needed */
+}
+
+#home .hero {
+    max-width: 1000px; /* Adjust maximum width of the content */
+    margin: 0 auto; /* Center align content horizontally */
+}
+
+#home .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#home .hero h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#home .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#banner {
+    padding: 20px 0; /* Adjust top and bottom padding */
+    background-color: #007bff; /* Example background color */
+    text-align: center; /* Center-align content */
+}
+
+#banner img {
+    max-width: 100%; /* Ensure image doesn't exceed its container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.logos img {
+    height: 80px;
+    margin: 0 10px;
+}
+
+.logo-and-description {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-and-description img {
+    height: 80px;
+    margin: 0 10px;
+}
+.logo-and-description h2 {
+  margin: 0 20px 0 0;
+}
+
+
+
+.content-section h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content-section p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* @media query for smaller screens */
+@media (max-width: 960px) {
+    .logos img {
+        height: 10vw; /* Increase logo size relative to viewport width */
+    }
+
+    .content-section {
+        padding: 0 20px; /* Example padding adjustment for smaller screens */
+    }
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f8f2; /* Light green background color */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.content-section {
+    margin-top: 20px; /* Adjust margin as needed */
+    width: 100%; /* Make content-section full width */
+    max-width: 1000px; /* Set max-width to match container */
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Centers the content-section */
+}
+
+.content-section .container {
+    padding: 20px; /* Example padding for inner container */
+    background-color: #ffffff; /* Example background color for inner container */
+    border: 1px solid #dddddd; /* Example border for inner container */
+}
+
+.content-section h1 {
+    font-size: 28px; /* Example font size for h1 */
+    color: #6F8B00; /* Green color for h1 */
+    margin-bottom: 10px; /* Example margin bottom for h1 */
+}
+
+.content-section h2 {
+    font-size: 24px; /* Example font size for h1 */
+    color: #6F8B00; /* Green color for h1 */
+    margin-bottom: 10px; /* Example margin bottom for h1 */
+}
+.content-section h3 {
+    font-size: 22px;
+    color: #6F8B00; /* Green color for titles */
+    margin-bottom: 15px; /* Increase margin-bottom for space after */
+    margin-top: 25px; /* Increase margin-top for space before */
+}
+
+.content-section h4 {
+    font-size: 20px;
+    color: #6F8B00; /* Green color for titles */
+    margin-bottom: 15px; /* Increase margin-bottom for space after */
+    margin-top: 25px; /* Increase margin-top for space before */
+}
+
+.content-section h5 {
+    font-size: 18px;
+    color: #6F8B00; /* Green color for titles */
+    margin-bottom: 15px; /* Increase margin-bottom for space after */
+    margin-top: 25px; /* Increase margin-top for space before */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logo-and-description {
+    margin-bottom: 20px; /* Adjust this value as needed */
+	margin-top: 20px;
+}
